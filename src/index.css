@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.navbar a.active {
+ border: 1px green solid;
+}
+
+.navbar a {
+    padding:10px 16px;
+    border-radius: 10px;
+}
