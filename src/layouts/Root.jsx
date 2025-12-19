@@ -7,7 +7,7 @@ const Root = () => {
     return (
         <>
             <Navbar/>
-            <main className='max-w-[1200px] mx-auto'>
+            <main className='max-w-300 mx-auto'>
                 <Outlet/>
             </main>
             <Footer/>

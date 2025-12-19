@@ -10,7 +10,16 @@ export const router = createBrowserRouter( [
     Component: Root,
 
     children: [
-        {index: true, Component: Home},
+        {
+            index: true,
+            Component: Home,
+            loader: async () => {
+                const res = await fetch('/booksData.json');
+                if(!res.ok) throw new Error('Failed to fetch posts');
+                return res.json();
+            },
+            
+        },
         {path: 'listBook', Component: ListBook},
         {path: 'pageRead', Component: PageRead},
     ]
